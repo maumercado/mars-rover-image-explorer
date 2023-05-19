@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Mars Rover Image Explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple web application that uses the Rover API to display images taken by the Perseverance rover on Mars. The application is built using React and Node.js.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Display a slideshow of images from the Perseverance rover.
+- Display a single image by its ID.
+- Show image metadata when hovering over an image.
+- Use of React Router for seamless navigation between different views:
+    - The root URL (`/`) shows a slideshow of images.
+    - A URL with a specific index (`/:index`) shows a single image.
 
-### `npm start`
+The React Router is a crucial part of this application, providing the ability to navigate between different views without a page refresh. When a user visits the root URL (`/`), they see a slideshow that periodically cycles between images. If they visit a URL with a specific index (`/:index`), they see a single image.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This is achieved using the `<BrowserRouter>` and `<Route>` components from `react-router-dom`. The `<BrowserRouter>` wraps the entire application, and the `<Route>` components define the paths and the components to render at those paths.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation and Usage
 
-### `npm test`
+Before you start, make sure you have Node.js and npm installed on your machine. Follow the steps below to run the project:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
 
-### `npm run build`
+    ```bash
+    git clone https://github.com/maumercado/mars-rover-image-explorer.git
+    cd mars-rover-image-explorer
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install the dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```bash
+    npm install
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Run the application:
 
-### `npm run eject`
+    ```bash
+    npm start
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+You can now access the application in your web browser at `http://localhost:3000`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Testing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This project uses the Jest testing framework and React Testing Library for component testing. To run the tests, use the following command:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm test
+```
